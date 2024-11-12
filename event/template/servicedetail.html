@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/talk.css' %}">
+
+<div class="container-fluid">
+  <div class="row mt-3 mb-3">
+    <div class="col-12">
+      <center>
+        <h2>{{v.name}}</h2>
+        <img src="{{v.image.url}}" height="600px" width="50%">
+      </center>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <br>
+       <p class="text-dark fs-4" style="width:85%; margin-left:100px; text-decoration:justify;">{{v.outline}}</p>
+      <div class="text-dark ms-5">
+        <p class="text-dark" style="width:85%; color:black; margin-left:200px; text-decoration:justify;">{{v.desc|linebreaks}}</p>
+      </div>
+
+
+    </div>
+
+    <div class="col-6">
+      <div class="container2" style="background-image:url('{% static 'img/gallery-4.jpg' %}')">
+
+        <div class="text2">
+            <h2 class="clr" style="margin-top:250px;">Melodia Events</h2>
+            <p class="h">ISO 9001:2015 Certified Company</p>
+            <h1 class="clr h">Make an Enquiry!</h1>
+            <button class="h">Let's Talk</button>
+        </div>
+      </div>
+      <br><br>
+        <div class="containerr">
+          <h1>Request quote</h1>
+          <form method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter your Full Name" required><br>
+            <input type="text" name="phone" placeholder="Enter your Phone Number" required><br>
+            <input type="email" name="email" placeholder="Enter your Email ID" required><br>
+            <textarea  name="message" placeholder="Message" required></textarea><br>
+            <button type="submit">SUBMIT</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+

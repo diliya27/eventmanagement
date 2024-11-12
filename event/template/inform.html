@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row mt-5 mt-5">
+    {% for i in item %}
+     <div class="col-sm-3">
+             <div class="card border border-3 border-primary" style="width: 18rem ;height:600px;">
+
+                 <h4 class="card-text">{{i.name}}</h4>
+                 <h6>{{i.number}}</h6>
+                 <h6>{{i.email}}</h6>
+                 <p class="text-dark">{{i.message}}</p>
+             </div>
+     </div>
+</div>
+     {% endfor %}
+{% endblock %}

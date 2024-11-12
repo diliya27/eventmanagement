@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .forms
+    {
+        padding:50px;
+        width:fit-content;
+        border:1px solid black;
+        margin-bottom:100px;
+        margin-left:500px;
+    }
+    input
+    {
+        margin-bottom:25px;
+        width:100%;
+    }
+    button
+    {
+        padding:10px;
+        border-radius:10px;
+    }
+
+</style>
+<link rel="stylesheet" href="{% static 'ccs/form.css' %}">
+<div class="containerr">
+          <h1>Request Pricing</h1>
+         <h6>Fill this form and we will contact you shortly. All the information provided will be treated confidentially.</h6>
+          <div class="container2 forms ">
+              <form method="post" >
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Enter your Full Name" required><br>
+                <input type="text" name="phone" placeholder="Enter your Phone Number" required><br>
+                <input type="email" name="email" placeholder="Enter your Email ID" required><br>
+                <textarea  name="message" placeholder="Message" required></textarea><br>
+                <button type="submit">SUBMIT</button>
+              </form>
+          </div>
+        </div>
+{% endblock %}

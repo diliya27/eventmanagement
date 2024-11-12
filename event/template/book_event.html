@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section style="height:100vh;">
+<style>
+    .container1{
+        width:25%;
+        border:1px solid black;
+        height:400px;
+        margin-left:500px;
+    }
+</style>
+    <div class="login-box mt-5 container1">
+        <h1 class="text-center text-dark">Enter Details</h1>
+        <form method="POST" Style="height:150px">
+            {% csrf_token %}
+             <div class="mb-3">
+              <label class="form-label text-dark">Phone No</label>
+              <input style="width:360px" type="number" class="form-control text-dark ms-2" name="phone"  >
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label text-dark"> Date Requried</label>
+              <input style="width:360px"type="date" class="form-control text-dark ms-2 " name="a"  >
+          </div>
+          <div class="mb-3">
+              <label class="form-label text-dark">People expected</label>
+              <input style="width:360px" type="number" class="form-control ms-2" name="n"  >
+          </div>
+
+
+          <center><button class="btn btn-primary text-center text-dark">BOOK NOW</button></center>
+
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!-- About Start -->
+        <div class="container-fluid position-relative overflow-hidden bg-secondary py-5">
+            <img src="{% static 'img/bg-flower.png' %}" class="img-fluid position-absolute top-0" style="right: -15px; transform: rotate(270deg); opacity: 0.5;" alt="">
+            <img src="{% static 'img/bg-flower.png' %}" class="img-fluid position-absolute" style="bottom: 10px; left: -15px; transform: rotate(90deg); opacity: 0.5;" alt="">
+            <div class="container py-5 position-relative">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="border-white bg-primary" style="border-style: double;">
+                            <img src="{% static 'img/about-1.jpg' %}" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="wow fadeIn" data-wow-delay="0.3s">
+                            <h5 class="text-uppercase text-primary fw-bold mb-4">About Us</h5>
+                            <h1 class="display-5 text-white mb-4">We Make Your Every Moment</h1>
+                            <p class="text-white fs-5 mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+
+                            <div class="d-flex mt-5">
+                                <div class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <a href="#" class="btn btn-primary btn-primary-outline-0 py-3 px-4">Read More</a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="d-inline-block ms-4 me-3">
+                                        <i class="fa fa-phone fa-2x text-success border border-2 border-white p-2"></i>
+                                    </div>
+                                    <div class="d-flex flex-column flex-nowrap">
+                                        <h5 class="text-dark fw-bold mb-2">Call Us Anytime</h5>
+                                        <h4 class="text-primary mb-0">+123 456 7890</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+{% endblock %}

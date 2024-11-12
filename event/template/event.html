@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid">
+	<div class="row">
+<h2 class="text-center">Event items</h2>
+		<div class="col-7">
+			<table class="table table-bordered text-dark table-primary">
+				<tr><th colspan="6">Book Event</th></tr>
+				{% for i in event %}
+				<tr>
+					<td><img src="{{i.service.image.url}}" width="150px" height="150px"></td>
+					<td>{{i.service.name}}</td>
+					<td><b>Event ID:{{i.service.id}}</b><br></td>
+					<td><b>Advance Amount:{{i.service.advance_amt}}</b><br></td>
+
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+		     <div class="col-4">
+				 <table class="table table-bordered text-dark table-primary">
+					 <tr><th colspan="4">checkout</th></tr>
+					 <tr>
+						 <td class="fw-bold">Total Amount:{{total}}</td>
+					 </tr>
+				 </table>
+				  <center><a href="{%  url 'event_bloom:book_event'%}" class="btn btn-primary" style="..">Place order</a><br><br>
+				 <a href="" class="btn btn-warning">Continue Booking</a></center>
+
+			 </div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+.containerr {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  background-color: #222;
+  color: white;
+}
+
+button {
+  background-color: #b89453;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #967143;
+}
